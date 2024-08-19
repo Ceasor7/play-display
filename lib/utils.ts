@@ -1,6 +1,5 @@
 import { Play } from '#site/content';
 import { clsx, type ClassValue } from 'clsx';
-import { slug } from 'github-slugger';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
@@ -38,4 +37,3 @@ export function getAllTags2(plays: Array<Play>) {
 export function sortTagsByCount(tags: Record<string, number>) {
   return Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
 }
-

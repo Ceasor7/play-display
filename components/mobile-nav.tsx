@@ -30,17 +30,8 @@ export function MobileNav() {
           <span className="font-bold">{siteConfig.name}</span>
         </MobileLink>
         <div className="flex flex-col gap-3 mt-3">
-          <MobileLink onOpenChange={setOpen} href="/blog">
-            Blog
-          </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/about">
-            About
-          </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/project">
-            Projects
-          </MobileLink>
-          <MobileLink onOpenChange={setOpen} href="/contact">
-            Contact
+          <MobileLink onOpenChange={setOpen} href="/play">
+            More Plays
           </MobileLink>
           <hr className=" py-1" />
           <div className="flex flex-row gap-6">
@@ -48,9 +39,29 @@ export function MobileNav() {
               <span className="sr-only">Twitter</span>
               <Icons.twitter className="h-6 w-6" />
             </a>
-            <a target="_blank" rel="noreferrer" href={siteConfig.links.github}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.instagram}
+            >
               <span className="sr-only">GitHub</span>
-              <Icons.gitHub className="h-6 w-6" />
+              <Icons.instagram className="h-6 w-6" />
+            </a>
+            <a target="_blank" rel="noreferrer" href={siteConfig.links.tiktok}>
+              <span className="sr-only">GitHub</span>
+              <Icons.tiktok className="h-6 w-6" />
+            </a>
+            <a target="_blank" rel="noreferrer" href={siteConfig.links.youtube}>
+              <span className="sr-only">GitHub</span>
+              <Icons.youtube className="h-6 w-6" />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.facebook}
+            >
+              <span className="sr-only">GitHub</span>
+              <Icons.facebook className="h-6 w-6" />
             </a>
           </div>
         </div>

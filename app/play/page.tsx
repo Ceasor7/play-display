@@ -1,15 +1,13 @@
-import { plays } from "#site/content";
-import { QueryPagination } from "@/components/query-pagination";
-import { Tag } from "@/components/tag";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getAllTags2, sortPlays, sortTagsByCount } from "@/lib/utils";
-import { Metadata } from "next";
-import { ProjectCard } from "../../components/ui/projectCard";
+import { plays } from '#site/content';
+import { QueryPagination } from '@/components/query-pagination';
+import { sortPlays } from '@/lib/utils';
+import { Metadata } from 'next';
+import { ProjectCard } from '../../components/ui/projectCard';
 
 export const metadata: Metadata = {
-  title: "My Projects",
+  title: 'My Projects',
   description:
-    " Here, you will find a curated collection of my projects, each showcasing my skills, creativity, and dedication to my craft. ",
+    ' Here, you will find a curated collection of my projects, each showcasing my skills, creativity, and dedication to my craft. ',
 };
 
 const PLAYS_PER_PAGE = 5;
@@ -30,36 +28,34 @@ export default async function PlayPage({ searchParams }: PlayPageProps) {
     PLAYS_PER_PAGE * currentPage
   );
 
-  const tags = getAllTags2(plays);
-  const sortedTags = sortTagsByCount(tags);
-
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
       <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
         <div className="flex-1 space-y-4">
           <h1 className="inline-block font-black text-4xl lg:text-5xl">
-            Projects
+            Plays
           </h1>
           <p className="text-xl text-muted-foreground">
-            My Projects and Collaborations
+            All listed KITFest plays
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-12 gap-3 mt-8">
-        <div className="col-span-12 col-start-1 sm:col-span-8">
+      <div className="flex justify-center mt-8">
+        <div className="w-full max-w-4xl">
           <hr />
           {displayPlays?.length > 0 ? (
             <ul className="flex flex-col">
               {displayPlays.map((play) => {
                 const { slug, image, date, title, description, tags } = play;
                 return (
-                  <li key={slug}>
+                  <li key={slug} className="mb-4">
                     <ProjectCard
                       slug={slug}
                       image={image}
+                      description={description}
                       date={date}
-                      title={title}
                       tags={tags}
+                      title={title}
                     />
                   </li>
                 );
@@ -73,16 +69,6 @@ export default async function PlayPage({ searchParams }: PlayPageProps) {
             className="justify-end mt-4"
           />
         </div>
-        <Card className="col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1">
-          <CardHeader>
-            <CardTitle>Tags</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-wrap gap-2">
-            {sortedTags?.map((tag) => (
-              <Tag tag={tag} key={tag} count={tags[tag]} />
-            ))}
-          </CardContent>
-        </Card>
       </div>
     </div>
   );

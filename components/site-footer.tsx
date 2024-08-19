@@ -15,9 +15,21 @@ export function SiteFooter() {
             <span className="sr-only">Twitter</span>
             <Icons.twitter className="h-6 w-6" />
           </a>
-          <a target="_blank" rel="noreferrer" href={siteConfig.links.github}>
-            <span className="sr-only">GitHub</span>
-            <Icons.gitHub className="h-6 w-6" />
+          <a target="_blank" rel="noreferrer" href={siteConfig.links.instagram}>
+            <span className="sr-only">Instagram</span>
+            <Icons.instagram className="h-6 w-6" />
+          </a>
+          <a target="_blank" rel="noreferrer" href={siteConfig.links.youtube}>
+            <span className="sr-only">Youtube</span>
+            <Icons.youtube className="h-6 w-6" />
+          </a>
+          <a target="_blank" rel="noreferrer" href={siteConfig.links.facebook}>
+            <span className="sr-only">Facebook</span>
+            <Icons.facebook className="h-6 w-6" />
+          </a>
+          <a target="_blank" rel="noreferrer" href={siteConfig.links.tiktok}>
+            <span className="sr-only">Tiktok</span>
+            <Icons.tiktok className="h-6 w-6" />
           </a>
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-muted-foreground">

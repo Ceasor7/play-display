@@ -1,18 +1,25 @@
-import React from "react";
-import EmblaCarousel from "./EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
-import "../../app/globals.css";
+import { EmblaOptionsType } from 'embla-carousel';
+import '../../app/globals.css';
+import EmblaCarousel from './EmblaCarousel';
 
 type Props = {};
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = [
-  "/plays/test1.jpg",
-  "/plays/test1.jpg",
-  "/plays/test1.jpg",
-  "/plays/test1.jpg",
-  "/plays/test1.jpg",
+  { src: '/plays/test6.jpg', title: 'The Dying need no Shoes', link: '/play' },
+  {
+    src: '/plays/test3.jpg',
+    title: 'Still birth on the streets in Nairobi',
+    link: '/play',
+  },
+  { src: '/plays/test4.jpg', title: 'The Dying need no Shoes', link: '/play' },
+  {
+    src: '/plays/test5.jpg',
+    title: 'Still birth on the streets in Nairobi',
+    link: '/play',
+  },
 ];
+
 const LandingPage = (props: Props) => {
   return (
     <div>
