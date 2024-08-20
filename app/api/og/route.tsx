@@ -1,11 +1,11 @@
-import { NextRequest } from "next/server";
-import { ImageResponse } from "next/og";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from '@/config/site';
+import { ImageResponse } from 'next/og';
+import { NextRequest } from 'next/server';
 
-export const runtime = "edge";
+export const runtime = 'edge';
 
 const interBold = fetch(
-  new URL("../../../assets/fonts/Inter-Bold.ttf", import.meta.url)
+  new URL('../../../assets/fonts/Inter-Bold.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export async function GET(req: NextRequest) {
@@ -13,10 +13,10 @@ export async function GET(req: NextRequest) {
     const fontBold = await interBold;
 
     const { searchParams } = req.nextUrl;
-    const title = searchParams.get("title");
+    const title = searchParams.get('title');
 
     if (!title) {
-      return new Response("No title provided", { status: 500 });
+      return new Response('No title provided', { status: 500 });
     }
 
     const heading =
@@ -39,18 +39,18 @@ export async function GET(req: NextRequest) {
               <path d="M4 4a16 16 0 0 1 16 16" />
               <circle cx="5" cy="19" r="1" />
             </svg>
-            <p tw="ml-2 font-bold text-2xl">JollyBlog</p>
+            <p tw="ml-2 font-bold text-2xl">KITFest Plays</p>
           </div>
           <div tw="flex flex-col flex-1 py-10">
             <div tw="flex text-xl uppercase font-bold tracking-tight font-normal">
-              BLOG POST
+              Listed plays
             </div>
             <div tw="flex text-[80px] font-bold text-[50px]">{heading}</div>
           </div>
           <div tw="flex items-center w-full justify-between">
             <div tw="flex text-xl">{siteConfig.url}</div>
             <div tw="flex items-center text-xl">
-              <div tw="flex ml-2">{siteConfig.links.github}</div>
+              <div tw="flex ml-2">{siteConfig.links.youtube}</div>
             </div>
           </div>
         </div>
@@ -60,15 +60,15 @@ export async function GET(req: NextRequest) {
         height: 630,
         fonts: [
           {
-            name: "Inter",
+            name: 'Inter',
             data: fontBold,
-            style: "normal",
+            style: 'normal',
             weight: 700,
           },
         ],
       }
     );
   } catch (error) {
-    return new Response("Failed to generate image", { status: 500 });
+    return new Response('Failed to generate image', { status: 500 });
   }
 }
