@@ -6,29 +6,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const latestPlays = sortPlays(plays).slice(0, 5);
 
   const playUrls = latestPlays.map((play) => ({
-    url: `https://ceasorcodes.vercel.app/${play.slug}`,
+    url: `https://https://play.kitfest.co.ke/${play.slug}`,
     lastModified: new Date(play.date),
   }));
 
   return [
     {
-      url: 'https://ceasorcodes.vercel.app/',
+      url: 'https://https://play.kitfest.co.ke/',
       lastModified: new Date(),
     },
     {
-      url: 'https://ceasorcodes.vercel.app/about',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://ceasorcodes.vercel.app/project',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://ceasorcodes.vercel.app/blog',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://ceasorcodes.vercel.app/contact',
+      url: 'https://ceasorcodes.vercel.app/play',
       lastModified: new Date(),
     },
     ...playUrls,

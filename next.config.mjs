@@ -1,7 +1,12 @@
 import { build } from 'velite';
 
 /** @type {import('next').NextConfig} */
+
 export default {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

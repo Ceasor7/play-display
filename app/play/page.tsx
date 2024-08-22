@@ -1,25 +1,21 @@
+'use client';
+
 import { plays } from '#site/content';
 import { QueryPagination } from '@/components/query-pagination';
 import { sortPlays } from '@/lib/utils';
-import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { ProjectCard } from '../../components/ui/projectCard';
-
-export const metadata: Metadata = {
-  title: 'My Projects',
-  description:
-    ' Here, you will find a curated collection of my projects, each showcasing my skills, creativity, and dedication to my craft. ',
-};
 
 const PLAYS_PER_PAGE = 5;
 
 interface PlayPageProps {
-  searchParams: {
+  params: {
     page?: string;
   };
 }
 
-export default async function PlayPage({ searchParams }: PlayPageProps) {
-  const currentPage = Number(searchParams?.page) || 1;
+function PlayPageContent({ params }: PlayPageProps) {
+  const currentPage = Number(params?.page) || 1;
   const sortedPlays = sortPlays(plays.filter((play) => play.published));
   const totalPages = Math.ceil(sortedPlays.length / PLAYS_PER_PAGE);
 
@@ -71,5 +67,13 @@ export default async function PlayPage({ searchParams }: PlayPageProps) {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PlayPage(props: PlayPageProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PlayPageContent {...props} />
+    </Suspense>
   );
 }

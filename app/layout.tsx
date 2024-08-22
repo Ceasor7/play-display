@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     type: 'website',
     locale: 'en_US',
-    url: 'https://ceasorcodes.vercel.app/',
-    siteName: 'Ceasor Codes',
+    url: 'https://play.kitfest.co.ke/',
+    siteName: 'KITFest plays',
   },
 };
 

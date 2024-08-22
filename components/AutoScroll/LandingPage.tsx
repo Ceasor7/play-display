@@ -6,15 +6,23 @@ type Props = {};
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = [
-  { src: '/plays/test6.jpg', title: 'The Dying need no Shoes', link: '/play' },
   {
-    src: '/plays/test3.jpg',
+    src: '/plays/dying-need-no-shoe.jpg',
+    title: 'The Dying need no Shoes',
+    link: '/play',
+  },
+  {
+    src: '/plays/still-birth.jpg',
     title: 'Still birth on the streets in Nairobi',
     link: '/play',
   },
-  { src: '/plays/test4.jpg', title: 'The Dying need no Shoes', link: '/play' },
   {
-    src: '/plays/test5.jpg',
+    src: '/plays/dying-need-no-shoe.jpg',
+    title: 'The Dying need no Shoes',
+    link: '/play',
+  },
+  {
+    src: '/plays/still-birth.jpg',
     title: 'Still birth on the streets in Nairobi',
     link: '/play',
   },

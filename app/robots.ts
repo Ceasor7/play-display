@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://ceasorcodes.vercel.app//sitemap.xml',
+    sitemap: 'https://play.kitfest.co.ke/sitemap.xml',
   };
 }
