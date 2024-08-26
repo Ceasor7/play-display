@@ -44,15 +44,11 @@ export function MobileNav() {
               rel="noreferrer"
               href={siteConfig.links.instagram}
             >
-              <span className="sr-only">GitHub</span>
+              <span className="sr-only">Instagram</span>
               <Icons.instagram className="h-6 w-6" />
             </a>
-            <a target="_blank" rel="noreferrer" href={siteConfig.links.tiktok}>
-              <span className="sr-only">GitHub</span>
-              <Icons.tiktok className="h-6 w-6" />
-            </a>
             <a target="_blank" rel="noreferrer" href={siteConfig.links.youtube}>
-              <span className="sr-only">GitHub</span>
+              <span className="sr-only">Youtube</span>
               <Icons.youtube className="h-6 w-6" />
             </a>
             <a
@@ -60,7 +56,7 @@ export function MobileNav() {
               rel="noreferrer"
               href={siteConfig.links.facebook}
             >
-              <span className="sr-only">GitHub</span>
+              <span className="sr-only">Facebook</span>
               <Icons.facebook className="h-6 w-6" />
             </a>
           </div>
