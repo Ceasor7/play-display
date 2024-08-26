@@ -60,21 +60,6 @@ export function SiteHeader() {
               </div>
             </Link>
             <Link
-              href={siteConfig.links.tiktok}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={cn(
-                  buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0 hidden sm:inline-flex'
-                )}
-              >
-                <Icons.tiktok className="h-4 w-4" />
-                <span className="sr-only">Tiktok</span>
-              </div>
-            </Link>
-            <Link
               href={siteConfig.links.facebook}
               target="_blank"
               rel="noreferrer"
