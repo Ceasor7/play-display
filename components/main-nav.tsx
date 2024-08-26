@@ -1,16 +1,16 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Icons } from './icons';
 
 export function MainNav() {
   const pathname = usePathname();
   return (
     <nav className="flex items-center space-x-4 lg:space-x-6">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <Icons.logo className=" h-40 w-40" />
+        <Image src="/logo.png" alt="Kitfest Logo" width={180} height={120} />
       </Link>
       <Link
         href="/play"

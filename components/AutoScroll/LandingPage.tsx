@@ -12,8 +12,8 @@ const SLIDES = [
     link: '/play',
   },
   {
-    src: '/plays/still-birth.jpg',
-    title: 'Still birth on the streets in Nairobi',
+    src: '/plays/dying-need-no-shoe.jpg',
+    title: 'The Dying need no Shoes',
     link: '/play',
   },
   {
@@ -22,8 +22,8 @@ const SLIDES = [
     link: '/play',
   },
   {
-    src: '/plays/still-birth.jpg',
-    title: 'Still birth on the streets in Nairobi',
+    src: '/plays/dying-need-no-shoe.jpg',
+    title: 'The Dying need no Shoes',
     link: '/play',
   },
 ];
