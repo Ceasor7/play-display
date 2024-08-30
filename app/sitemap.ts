@@ -16,7 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: 'https://ceasorcodes.vercel.app/play',
+      url: 'https://https://play.kitfest.co.ke/',
       lastModified: new Date(),
     },
     ...playUrls,
